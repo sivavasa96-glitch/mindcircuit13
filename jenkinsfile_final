@@ -10,7 +10,7 @@ pipeline {
       stage('checkout') {
             steps {
                 echo 'Cloning GIT HUB Repo '
-				git branch: 'main', url: 'https://github.com/devopstraininghub/mindcircuit13.git'
+				git branch: 'main', url: 'https://github.com/sivavasa96-glitch/Java-apple-project.git'
             }  
         }
 		
@@ -22,7 +22,7 @@ pipeline {
                 sh 'ls -ltr'
                 
                 sh ''' mvn sonar:sonar \\
-                      -Dsonar.host.url=http://44.210.116.12:9000 \\
+                      -Dsonar.host.url=http://localhost:9000 \\
                       -Dsonar.login=squ_a46b6947d43a812180415ff94219120d2ddebcea'''
             }
     	}
